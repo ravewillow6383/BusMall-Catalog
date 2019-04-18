@@ -41,6 +41,7 @@ function addSelectedItemToCart() {
 }
 
 // TODO: Update the cart count in the header nav with the number of items in the Cart
+// FOR REAL TODO LATER - GET NUMBER ON CART PAGE
 var counter = 0;
 function updateCounter() {
   counter += parseInt(document.getElementById('quantity').value);
@@ -50,10 +51,10 @@ function updateCounter() {
 
 function updateCartPreview() {
   var previewList = document.getElementById('cartContents');
-  var liElement = document.createElement('li');
-  liElement.style.listStyle = 'none';
-  liElement.textContent = `${document.getElementById('items').value}: ${document.getElementById('quantity').value}`;
-  previewList.appendChild(liElement);
+  var liEl = document.createElement('li');
+  liEl.style.listStyle = 'none';
+  liEl.textContent = `${document.getElementById('items').value}: ${document.getElementById('quantity').value}`;
+  previewList.appendChild(liEl);
 }
 
 // Set up the "submit" event listener on the form.
